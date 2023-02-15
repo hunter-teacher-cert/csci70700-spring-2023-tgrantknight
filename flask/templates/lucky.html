@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/static/style.css">
+
+<h1>Lucky Number Time</h1>
+
+<p>Your lucky numbers are:</p>
+<ol>
+{% for num in nums %}
+<li>{{num}}</li>
+{% endfor %}
+</ol>
+<a href = "https://Topics-Flask-Project.taylorgrant-kn1.repl.co/lucky">Roll new numbers</a>
+<br><br>
+<a href = "https://Topics-Flask-Project.taylorgrant-kn1.repl.co">Go home</a>
