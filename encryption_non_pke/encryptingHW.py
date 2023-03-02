@@ -3,6 +3,7 @@ import random
 # Globals
 alpha = []
 cipher = []
+message = "HELLO THERE SPACE COMANDER"
 
 def make_cipher():
   #initial alpha and cipher
@@ -19,9 +20,21 @@ def make_cipher():
       j = random.randint(0,25)
     cipher[j] = alpha[i]
     
-  
+
+def encrypt(message):
+  encrypted = ""
+  for letter in message:
+    if letter in alpha:
+      index = ord(letter) - ord('A')
+      encrypted += cipher[index]
+    else:
+      encrypted += letter
+
+  return encrypted
 
 
 make_cipher()
-print(alpha)
-print(cipher)
+# print(alpha)
+# print(cipher)
+print(message)
+print(encrypt(message))
